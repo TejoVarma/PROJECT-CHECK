@@ -1,13 +1,13 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { deleteCar, editCar, getCarById } from "../../utils/adminData";
+import { deleteCar,editCar, getCarById } from "../../utils/adminData";
 import AdminHeader from "./AdminHeader";
 import ImagePreview from "./ImagePreview";
 import { CarList } from "../../contexts/AdminContexts";
 
 export default function AdminEditCar(){
     const { id } = useParams();
-    const {addPreview, preview,editCar} = useContext(CarList);
+    const {addPreview, preview,editCarContext} = useContext(CarList);
     const [edit,setEdit] = useState(false);
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
@@ -50,7 +50,7 @@ export default function AdminEditCar(){
             editCar(car, id)
             .then(res => {
                 if(res.status === "Success") {
-                    editCar(res.result);
+                    editCarContext(res.result);
                     setFormData({
                         carname: "",
                         type: "",
