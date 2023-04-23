@@ -21,7 +21,7 @@ export default function AdminContext({children}) {
             const updated = [car, ...cars];
             setCars(updated);
         },
-        editCar : (car) => {
+        editCarContext : (car) => {
             const updatedCar = [car ,...cars];
             setCars(updatedCar);
         },
