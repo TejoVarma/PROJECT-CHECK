@@ -7,7 +7,7 @@ import { CarList } from "../../contexts/AdminContexts";
 
 export default function AdminEditCar(){
     const { id } = useParams();
-    const {addPreview, preview,editCarContext} = useContext(CarList);
+    const {addPreview, preview,editCarContext,deleteCarContext} = useContext(CarList);
     const [edit,setEdit] = useState(false);
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
@@ -80,9 +80,9 @@ export default function AdminEditCar(){
             .then(res => {
                 if(res.status === "Success")
                 {
+                    deleteCarContext();
                     setEdit(false);
                     navigate('/admin')
-                    window.location.reload();
                 }
                 else
                 {
