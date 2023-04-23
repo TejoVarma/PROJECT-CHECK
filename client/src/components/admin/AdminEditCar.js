@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { deleteCar,editCar, getCarById } from "../../utils/adminData";
+import { deleteCar,editCar, getCarById, getCars } from "../../utils/adminData";
 import AdminHeader from "./AdminHeader";
 import ImagePreview from "./ImagePreview";
 import { CarList } from "../../contexts/AdminContexts";
