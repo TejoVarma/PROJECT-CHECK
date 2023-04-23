@@ -1,0 +1,279 @@
+body{
+    width: 100vw;
+    height: 100vh;
+}
+.header-admin {
+    display: flex;
+    background-color: black;
+    box-shadow: 0px 3px 6px #CBCBCB29;
+    border: 1px solid #f0f0f0;
+    opacity: 1;
+}
+
+.logo-admin {
+    width: 50%;
+    margin: 10px;
+    letter-spacing: 2.4px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo-admin-pic{
+    width: 70px;
+    margin-left: 20px;
+    border-radius: 35px;
+    display: inline-block;
+}
+.logo-admin-pic:hover{
+    cursor: pointer;
+}
+.company-admin{
+    display: inline-block;
+    vertical-align:auto;
+    margin-left: 20px;
+    color: white;
+}
+.company-admin:hover{
+    cursor: pointer;
+}
+.logout-container-admin {
+    width: 50%;
+    font: normal normal medium 20px/25px Helvetica Neue;
+    letter-spacing: 0px;
+    color: #707070;
+    font-size: 24px;
+    opacity: 1;
+}
+.logout-text-container-admin{
+    margin-left: 85%;
+}
+.logout-text-container-admin>p{
+    width: 71px;
+    margin : 25px;
+    color: white;
+}
+.logout-text-container-admin>p:hover {
+    cursor: pointer;
+    color: orangered;
+}
+
+.admin-body-admin {
+    box-sizing: border-box;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.welcome-message-admin {
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+.car-heading-and-add-container-admin{
+    display: flex;
+    margin : 20px;
+}
+.cars-heading-container-admin{
+    width: 50%;
+}
+.add-car-btn-admin{
+    width: 50%;
+    margin-left: 700px;
+}
+
+.addCar-admin {
+    width: 100px;
+    height: 40px;
+    background-color: #4E94F4;
+    font-size: 18px;
+    color: white;
+    border-radius: 8px;
+    transition: 1s;
+    border: none;
+}
+.addCar-admin:hover{
+    width: 150px;
+    cursor: pointer;
+}
+
+.cars-heading-admin,
+.add-car-btn-admin {
+    display: inline-block;
+    width: 50px;
+}
+
+.card-container-admin {
+    width: 380px;
+    height: 310px;
+    text-decoration: none;
+    border: 1px solid #7C7C7C;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px 1px grey;
+}
+.add-car-heading-admin{
+    margin-left: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.image-container-admin {
+    width: 371px;
+    height: 180px;
+}
+.footer-admin{
+    width: 371px;
+    height: 130px;
+}
+.image-admin {
+    width: 371px;
+    height: 180px;
+    margin-left: 5px;
+}
+
+.persons-container-admin {
+    height: 18px;
+}
+
+.persons-admin {
+    margin: 0px;
+    margin-left: 10px;
+    color: #7C7C7C;
+}
+
+.carname-admin {
+    display: inline-block;
+    width: 40%;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.description-admin {
+    width: 100%;
+    height: 31px;
+    margin-bottom: 10px;
+}
+
+.perkm-admin {
+    display: inline-block;
+    width: 50%;
+    font-size: 24px;
+    text-align: right;
+    color: #32C348;
+    font-weight: bold;
+}
+
+.date-container-admin {
+    height: 28px;
+}
+
+.date-notation-admin {
+    display: inline-block;
+    margin-left: 10px;
+    color: #7C7C7C;
+}
+
+.date-admin {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.car-cards-container-admin {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.field-container-admin{
+    margin : 30px;
+}
+.form-container-admin{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 20px;
+    border: 1px solid grey;
+    box-shadow: 0 5px 5px 0;
+}
+.sections-admin{
+    display: flex;
+}
+.left-section-admin{
+    width: 50%;
+    text-align: justify;
+}
+.right-section-admin{
+    width: 50%;
+}
+.labels-admin{
+    display: block;
+    font-size: 22px;
+    color: #2D2D2E;
+}
+.flex-admin{
+    display: flex;
+}
+.flex-boxes-admin
+{
+    width: 50%;
+}
+.buttons-container-admin{
+    display: flex;
+}
+#carname-admin{
+    margin-top: 10px;
+    width: 90%;
+    height: 41px;
+    font-size: 20px;
+}
+#type-admin, #model-admin, #mileage-admin, #perkm-admin, #availablefrom-admin, #availabletill-admin,#file-admin
+{
+    margin-top: 10px;
+    width: 301px;
+    height: 41px;
+    font-size: 20px;
+}
+#description-admin{
+    margin-top: 10px;
+    width: 90%;
+    height: 150px;
+    font-size: 20px;
+}
+#preview-img-container-admin>img{
+    width: 200px
+}
+#cardetails-admin, #details-admin{
+    font-size: 20px;
+}
+.cancel-button-admin{
+    width: 200px;
+    height: 50px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    border: 1px solid #007FED;
+    color: #007FED;
+    transition: 1s;
+    border-radius: 25px;
+}
+.cancel-button-admin:hover{
+    width: 250px;
+}
+.post-admin{
+    text-align: center;
+}
+.submit-button-admin{
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    background-color: #007FED;
+    font-size: 20px;
+    transition: 1s;
+    color: white;
+}
+.submit-button-admin:hover{
+    width: 250px;
+}
+.delete-admin{
+    margin-right: 10px;
+    background-color: red;
+}
