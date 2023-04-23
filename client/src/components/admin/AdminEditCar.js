@@ -7,7 +7,7 @@ import { CarList } from "../../contexts/AdminContexts";
 
 export default function AdminEditCar(){
     const { id } = useParams();
-    const {addPreview, preview} = useContext(CarList);
+    const {addPreview, preview,editCar} = useContext(CarList);
     const [edit,setEdit] = useState(false);
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
@@ -50,6 +50,7 @@ export default function AdminEditCar(){
             editCar(car, id)
             .then(res => {
                 if(res.status === "Success") {
+                    editCar(res.result);
                     setFormData({
                         carname: "",
                         type: "",
@@ -65,7 +66,7 @@ export default function AdminEditCar(){
                     });
                     // setLoader(false);
                     navigate("/admin");
-                    window.location.reload();
+                    // window.location.reload();
                 } else {
                     // setLoader(false);
                     alert("Failed to edit car, try again...")
