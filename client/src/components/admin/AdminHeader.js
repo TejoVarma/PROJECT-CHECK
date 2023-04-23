@@ -13,7 +13,7 @@ export default function AdminHeader() {
         <div className='logout-container-admin'>
           <div className="logout-text-container-admin">
             <p onClick={()=>{
-              localStorage.clear();
+              localStorage.removeItem('authToken');
               navigate('/');
 
             }}>Logout</p>
