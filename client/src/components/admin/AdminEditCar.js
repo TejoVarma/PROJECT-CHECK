@@ -50,7 +50,7 @@ export default function AdminEditCar(){
             editCar(car, id)
             .then(res => {
                 if(res.status === "Success") {
-                    editCarContext(res.result);
+                    editCarContext();
                     setFormData({
                         carname: "",
                         type: "",
