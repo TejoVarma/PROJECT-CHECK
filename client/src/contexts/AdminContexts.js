@@ -13,7 +13,7 @@ export default function AdminContext({children}) {
         });
         setPreview("")
         
-    }, [])
+    }, [cars])
 
     return <CarList.Provider value={{
         cars : cars,
