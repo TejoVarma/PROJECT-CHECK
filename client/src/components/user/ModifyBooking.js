@@ -22,7 +22,7 @@ function ModifyBooking() {
     });
   };
   useEffect(() => {
-    fetch("http://localhost:4000/user/getbookingdetails")
+    fetch("https://project-check-node-tejo.onrender.com/user/getbookingdetails")
       .then((response) => response.json())
       .then((data) => setData(data.data[data.data.length - 1]))
       .catch((error) => console.error(error));
@@ -43,7 +43,7 @@ function ModifyBooking() {
     const id = data._id;
     console.log(id);
     axios
-      .put(`http://localhost:4000/user/updatebooking/${id}`, data)
+      .put(`https://project-check-node-tejo.onrender.com/user/updatebooking/${id}`, data)
       .then((res) => {
         console.log(res);
       })

@@ -1,4 +1,4 @@
-const url = "http://localhost:4000";
+const url = "https://project-check-node-tejo.onrender.com";
 export const getcars = () => {
   return fetch(`${url}/user/getcars`)
     .then((res) => res.json())

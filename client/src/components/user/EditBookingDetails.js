@@ -13,14 +13,14 @@ const EditBookingDetails = () => {
   // const [mybook, setmybook] = useState(false);
   const [destination, setdestination] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:4000/user/getbookingdetails")
+    fetch("https://project-check-node-tejo.onrender.com/user/getbookingdetails")
       .then((response) => response.json())
       .then((destination) =>
         setdestination(destination.data[destination.data.length - 1])
       );
   }, []);
   useEffect(() => {
-    fetch("http://localhost:4000/user/mybookings")
+    fetch("https://project-check-node-tejo.onrender.com/user/mybookings")
       .then((response) => response.json())
       .then((data) => setdata(data.data));
   }, []);

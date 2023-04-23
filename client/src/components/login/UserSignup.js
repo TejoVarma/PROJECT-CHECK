@@ -19,7 +19,7 @@ function UserSignup() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch('http://localhost:4000/api/createUser', {
+    const response = await fetch('https://project-check-node-tejo.onrender.com/api/createUser', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

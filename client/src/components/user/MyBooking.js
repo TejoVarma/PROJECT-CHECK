@@ -15,7 +15,7 @@ const MyBooking = () => {
   const [data, setdata] = useState([]);
   const navigate=useNavigate()
   useEffect(() => {
-    fetch("http://localhost:4000/user/mybookings")
+    fetch("https://project-check-node-tejo.onrender.com/user/mybookings")
       .then((response) => response.json())
       .then((data) => setdata(data.data));
   }, []);
@@ -33,7 +33,7 @@ const MyBooking = () => {
           <div className="div-1" key={item._id}>
             <div className="one-div">
               <img
-                src={`http://localhost:4000/admin/${item.image}`}
+                src={`https://project-check-node-tejo.onrender.com/admin/${item.image}`}
                 alt="photo"
               />
             </div>
@@ -102,7 +102,7 @@ const MyBooking = () => {
                 // }}
                 onClick={() => {
                   console.log(item._id);
-                  fetch(`http://localhost:4000/user/mybookings/${item._id}`, {
+                  fetch(`https://project-check-node-tejo.onrender.com/user/mybookings/${item._id}`, {
                     method: "DELETE",
                   })
                     .then((response) => {

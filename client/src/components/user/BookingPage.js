@@ -30,13 +30,13 @@ const BookinPage = () => {
     setcardetails(true);
   };
   useEffect(() => {
-    fetch("http://localhost:4000/user/getcars")
+    fetch("https://project-check-node-tejo.onrender.com/user/getcars")
       .then((response) => response.json())
       .then((data) => setdata(data.data));
   }, []);
   // console.log(data);
   useEffect(() => {
-    fetch("http://localhost:4000/user/getbookingdetails")
+    fetch("https://project-check-node-tejo.onrender.com/user/getbookingdetails")
       .then((response) => response.json())
       .then((destination) =>
         setdestination(destination.data[destination.data.length - 1])
@@ -105,7 +105,7 @@ const BookinPage = () => {
             {data.map((item) => (
               <div key={item._id} className="card">
                 <img
-                  src={`http://localhost:4000/admin/${item.image}`}
+                  src={`https://project-check-node-tejo.onrender.com/admin/${item.image}`}
                   alt={item.carname}
                   onClick={() => {
                     console.log("hello");
