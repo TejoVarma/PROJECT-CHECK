@@ -13,9 +13,10 @@ import {
 }
 from 'mdb-react-ui-kit';
 import { Link, useNavigate } from 'react-router-dom';
+import { getCars } from '../../utils/adminData';
 
 function AdminLogin() {
-    
+    const [cars,setCars] = useState([]);
     const [credentials, setCredentials] = useState({  email: '',  password: '' });
     let navigate = useNavigate();
 
@@ -37,7 +38,10 @@ function AdminLogin() {
 
     if (json.success && json.authToken) {
       localStorage.setItem('adminToken', JSON.stringify(json.authToken));
-      navigate("/admin")
+      navigate("/admin");
+      getCars().then(res => {
+        setCars(res.result.reverse());
+      });
     }
 
   };
