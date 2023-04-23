@@ -1,0 +1,35 @@
+.landing-page{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../public/logo.jpeg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.tagline-container{
+    margin-left: 1030px;
+    padding-top: 400px;
+    text-align: center;
+}
+.tagline{
+    font-size: 30px;
+    font-style: oblique;
+    margin-bottom: 20px;
+}
+.tagline-sub{
+    font-size: 20px;
+    font-style: oblique;
+    margin-bottom: 20px;
+}
+.landing-page-button{
+    width: 300px;
+    height: 50px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-style: oblique;
+    border-radius: 25px;
+    transition: 1s;
+}
+.landing-page-button:hover{
+    width: 350px;
+}
