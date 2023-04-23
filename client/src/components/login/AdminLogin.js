@@ -33,7 +33,6 @@ function AdminLogin() {
     console.log(json);
     if (!json.success) {
       alert('Enter Valid credentials');
-      window.location.reload();
     }
 
     if (json.success && json.authToken) {

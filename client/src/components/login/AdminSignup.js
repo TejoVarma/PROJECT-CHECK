@@ -37,7 +37,6 @@ function AdminSignup() {
     else
     {
       navigate('/adminlogin');
-      window.location.reload();
     }  
   };
 

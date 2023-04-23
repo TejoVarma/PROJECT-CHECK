@@ -6,6 +6,7 @@ export const CarList = createContext()
 export default function AdminContext({children}) {
 
     const [cars, setCars] = useState([]);
+    const [deleteCars,setDeleteCars] = useState([]);
     const [preview, setPreview] = useState("");
     useEffect(() => {
         getCars().then(res => {
@@ -13,7 +14,13 @@ export default function AdminContext({children}) {
         });
         setPreview("")
         
-    }, [])
+    }, []);
+
+    useEffect(()=>{
+        getCars().then(res=>{
+            setDeleteCars(res.result.reverse());
+        })
+    },[])
 
     return <CarList.Provider value={{
         cars : cars,
@@ -24,6 +31,10 @@ export default function AdminContext({children}) {
         editCarContext : (car) => {
             const updatedCar = [car ,...cars];
             setCars(updatedCar);
+        },
+        deleteCarContext : ()=>{
+            const deleteCar = [...deleteCars];
+            setCars(deleteCar);
         },
         preview,
         addPreview : (url) => setPreview(url)
