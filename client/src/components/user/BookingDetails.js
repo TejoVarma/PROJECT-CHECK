@@ -26,7 +26,7 @@ const BookingDetails = (singlecar) => {
   // }, [destination.length]);
  
   useEffect(() => {
-    fetch("http://localhost:4000/user/getbookingdetails")
+    fetch("https://project-check-node-tejo.onrender.com/user/getbookingdetails")
       .then((response) => response.json())
       .then((destination) =>
         setdestination(destination.data[destination.data.length - 1])
@@ -48,7 +48,7 @@ const BookingDetails = (singlecar) => {
       enddate: destination.enddate,
     };
     // console.log(data)
-    fetch("http://localhost:4000/user/mybookings", {
+    fetch("https://project-check-node-tejo.onrender.com/user/mybookings", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -91,7 +91,7 @@ const BookingDetails = (singlecar) => {
 
               <div className="mini-3rd-div-img">
                 <img
-                  src={`http://localhost:4000/admin/${singlecar.singlecar.image}`}
+                  src={`https://project-check-node-tejo.onrender.com/admin/${singlecar.singlecar.image}`}
                   alt="photo"
                 />
               </div>
