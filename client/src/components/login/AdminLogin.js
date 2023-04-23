@@ -37,7 +37,7 @@ function AdminLogin() {
 
     if (json.success && json.authToken) {
       localStorage.setItem('adminToken', JSON.stringify(json.authToken));
-      <Navigate to={'/admin'}/>
+      navigate('/admin');
     }
 
   };

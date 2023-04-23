@@ -6,16 +6,20 @@ export const CarList = createContext()
 export default function AdminContext({ children }) {
 
     const [cars, setCars] = useState([]);
-    const [deleteCars, setDeleteCars] = useState([]);
-    const [editCars, setEditCars] = useState([]);
     const [preview, setPreview] = useState("");
+    
+    useEffect(()=>{
+        getCars().then(res => {
+            setCars(res.result.reverse());
+        });
+        setPreview("");
+    },[]);
+
     useEffect(() => {
         getCars().then(res => {
             setCars(res.result.reverse());
         });
-        setPreview("")
-
-    }, []);
+    }, [cars]);
 
     useEffect(() => {
         getCars().then(res => {
